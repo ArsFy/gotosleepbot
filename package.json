@@ -1,0 +1,23 @@
+{
+  "name": "gotosleepbot",
+  "version": "1.0.0",
+  "description": "Telegram 睡覺 bot，提醒群友快點睡覺",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArsFy/gotosleepbot.git"
+  },
+  "author": "arsfy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ArsFy/gotosleepbot/issues"
+  },
+  "homepage": "https://github.com/ArsFy/gotosleepbot#readme",
+  "dependencies": {
+    "node-schedule": "^2.1.0",
+    "node-telegram-bot-api": "^0.56.0"
+  }
+}
