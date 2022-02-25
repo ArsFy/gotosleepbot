@@ -49,7 +49,7 @@ bot.on('message', (msg) => {
                         }
                         (async (username, chatid, from)=>{
                             schedule.scheduleJob(setDate, ()=>{
-                                bot.sendMessage(chatid, `${username}, ${from} 提醒你睡覺了！`, {reply_markup: {"inline_keyboard": [[{"text":"我要再摸10分鐘","callback_data": JSON.stringify({"event":"sleep", "user": username})}]]}});
+                                bot.sendMessage(chatid, `${username}, @${from} 提醒你睡覺了！`, {reply_markup: {"inline_keyboard": [[{"text":"我要再摸10分鐘","callback_data": JSON.stringify({"event":"sleep", "user": username})}]]}});
                             });
                         })(msgInfo[1], msg.chat.id, msg.from.username)
                         bot.sendMessage(msg.chat.id, `設定提醒：${tday} ${hour<10?"0"+hour:hour}:${minute<10?"0"+minute:minute}，我會${msg.chat.username!=undefined?"在 @"+msg.chat.username+" ":""}提醒 ${msgInfo[1]} 睡覺哦！`, {"reply_to_message_id": msg.message_id});
